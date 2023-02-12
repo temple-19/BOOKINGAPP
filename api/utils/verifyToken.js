@@ -15,7 +15,7 @@ export const verfityToken = (req, res, next) => {
 };
 
 export const verifyUser = (req, res, next) => {
-  verfityToken(req, res, () => {
+  verfityToken(req, res, next, () => {
     if (req.user.id === req.params.id || req.user.isAdmin) {
       next();
     } else {
@@ -25,7 +25,7 @@ export const verifyUser = (req, res, next) => {
 };
 
 export const verifyAdmin = (req, res, next) => {
-  verfityToken(req, res, () => {
+  verfityToken(req, res, next, () => {
     if (req.user.isAdmin) {
       next();
     } else {
