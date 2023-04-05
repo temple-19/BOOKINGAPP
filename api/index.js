@@ -25,7 +25,7 @@ mongoose.connection.on('disconnected', () => {
   console.log('db disconnected');
 });
 
-//middlewares
+//middlewaress
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
