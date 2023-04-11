@@ -28,10 +28,14 @@ const Navbar = () => {
         </Link>
         {user ? (
           <div className="navItems">
-            <span>{user.username}</span>
-            <button onClick={logout} className="option">
+            <span className="usrdis">{user.username}</span>
+            <Link
+              onClick={logout}
+              className="option"
+              style={{ color: 'white', textDecoration: 'none' }}
+            >
               Logout
-            </button>
+            </Link>
           </div>
         ) : (
           <div className="navItems">
